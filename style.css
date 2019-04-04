@@ -1,0 +1,78 @@
+		* {
+			list-style-type:none; /* li 옆의 점을 없애는것 */
+			}
+		.container{
+			display:flex;
+			flex-direction: column;
+			}
+		.contents{
+			display:flex;
+			justify-content:space-around;
+			}
+		.list{
+			display:flex;
+			justify-content: center;
+			}
+		h2{
+			text-align:center;
+			}
+		h3{
+			padding-left:30px ;
+			}
+		header{
+			border-bottom: solid gray 1px;
+			}
+		.contents #nav ul{
+			padding: 6px;
+			margin: 0;
+			}
+		.contents nav{
+			width:150px;
+			border-right: solid gray 1px;
+			text-align: center;
+			}
+		.contents main{
+			display: flex;
+			justify-content: space-between;
+			}
+		aside{
+			border-left:solid gray 1px;
+			width:150px;
+			padding:15px;
+			}
+		footer{
+			border-top:solid gray 1px;
+			text-align:center;
+			}
+		@media(max-width: 600px){ /*화면폭이 500px보다 작아지면 grid에서 block로 변하게 */
+
+			.contents {
+				flex-direction:column;
+				}
+			.contents nav{
+				width: 100%;
+				border-right: none;
+				border-bottom: solid gray 1px;
+				}
+			.contents #nav {
+				display: flex;
+				flex-direction: row;
+				justify-content:center;/** nav의 세로 ul이 가로로 정렬됨 **/
+				flex-wrap:wrap;/** ul의 가로줄이 길어지면 다음 칸으로 자동 넘어가ㅣ**/
+				padding: 10px;
+				}
+			.contents li{
+				padding:3px;
+				}
+			.list {
+				display:flex;
+				justify-content: center;
+				flex-wrap:wrap;
+				}
+			aside{
+				border-left:none;
+				border-top:solid gray 1px;
+				width:100%;
+				padding:0;
+				}
+			}
